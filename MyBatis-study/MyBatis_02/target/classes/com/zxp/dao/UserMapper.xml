@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+
+<mapper namespace="com.zxp.dao.UserMapper">
+
+    <!-- 使用resultMap来解决映射不一致的问题 -->
+    <resultMap id="UserMap" type="User">
+        <!--映射一致的部分不用写出来-->
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <!--select查询语句-->
+    <select id="getUserList" resultType="com.zxp.pojo.User">
+        select * from mybatis.user
+    </select>
+
+    <select id="getUserById" resultMap="UserMap" parameterType="int">
+        select * from mybatis.user where id = #{id};
+    </select>
+
+    <!--    User对象中的元素可以直接取出来-->
+    <insert id="addUser" parameterType="com.zxp.pojo.User">
+        insert into mybatis.user(id, name, pwd) VALUES (#{id},#{name},#{pwd});
+    </insert>
+
+    <update id="updateUser" parameterType="com.zxp.pojo.User">
+        update mybatis.user
+        set name = #{name},pwd = #{pwd}
+        where id = #{id};
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from mybatis.user where id = #{id};
+    </delete>
+</mapper>
