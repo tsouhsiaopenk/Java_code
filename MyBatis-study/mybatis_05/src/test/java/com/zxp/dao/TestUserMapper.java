@@ -7,67 +7,45 @@ import org.junit.Test;
 
 import java.util.List;
 
-
 public class TestUserMapper {
 
     @Test
     public void getUserList() {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-
-        List<User> userList = userMapper.getUserList();
-
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        List<User> userList = mapper.getUserList();
         for (User user : userList) {
             System.out.println(user);
         }
-
         sqlSession.close();
     }
-
 
     @Test
     public void getUserById() {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-
-        User userById = userMapper.getUserById(1);
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User userById = mapper.getUserById(2);
         System.out.println(userById);
-
         sqlSession.close();
     }
 
     @Test
     public void addUser() {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
+        User user = new User(8, "中文测试", "1298");
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-
-        User user = new User(6, "妥妥", "1101");
-        mapper.addUser(user);
-
-        // 增删改事务必须提交
-        sqlSession.commit();
+        int i = mapper.addUser(user);
+        System.out.println(i);
+        // 在建立sqlSession时候选择自动提交，这里不再需要手动提交
         sqlSession.close();
     }
 
     @Test
-    public void UpdateUser() {
-        SqlSession sqlSession = MybatisUtils.getSqlSession();
-
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        mapper.updateUser(new User(1, "周小川", "122"));
-
-        sqlSession.commit();
-
-        sqlSession.close();
-    }
-
-    @Test
-    public void deleteUser(){
+    public void deleteUser() {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        mapper.deleteUser(4);
-        sqlSession.commit();
+        int delete = mapper.delete(5);
+        System.out.println(delete);
         sqlSession.close();
     }
 }
-

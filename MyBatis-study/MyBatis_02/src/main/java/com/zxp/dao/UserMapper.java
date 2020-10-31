@@ -3,6 +3,7 @@ package com.zxp.dao;
 import com.zxp.pojo.User;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
     // 查询用户列表
@@ -19,4 +20,7 @@ public interface UserMapper {
 
     // 删除一个用户
     int deleteUser(int id);
+
+    // 分页查询
+    List<User> getUserListByLimit(Map<String,Integer> map);
 }

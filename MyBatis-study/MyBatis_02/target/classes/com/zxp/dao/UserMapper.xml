@@ -2,17 +2,17 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--namespace=ç»‘å®šä¸€ä¸ªå¯¹åº”çš„Dao/MapperæŽ¥å£-->
+<!--namespace=°ó¶¨Ò»¸ö¶ÔÓ¦µÄDao/Mapper½Ó¿Ú-->
 
 <mapper namespace="com.zxp.dao.UserMapper">
 
-    <!-- ä½¿ç”¨resultMapæ¥è§£å†³æ˜ å°„ä¸ä¸€è‡´çš„é—®é¢˜ -->
+    <!-- Ê¹ÓÃresultMapÀ´½â¾öÓ³Éä²»Ò»ÖÂµÄÎÊÌâ -->
     <resultMap id="UserMap" type="User">
-        <!--æ˜ å°„ä¸€è‡´çš„éƒ¨åˆ†ä¸ç”¨å†™å‡ºæ¥-->
+        <!--Ó³ÉäÒ»ÖÂµÄ²¿·Ö²»ÓÃÐ´³öÀ´-->
         <result column="pwd" property="password"/>
     </resultMap>
 
-    <!--selectæŸ¥è¯¢è¯­å¥-->
+    <!--select²éÑ¯Óï¾ä-->
     <select id="getUserList" resultType="com.zxp.pojo.User">
         select * from mybatis.user
     </select>
@@ -21,7 +21,7 @@
         select * from mybatis.user where id = #{id};
     </select>
 
-    <!--    Userå¯¹è±¡ä¸­çš„å…ƒç´ å¯ä»¥ç›´æŽ¥å–å‡ºæ¥-->
+    <!--    User¶ÔÏóÖÐµÄÔªËØ¿ÉÒÔÖ±½ÓÈ¡³öÀ´-->
     <insert id="addUser" parameterType="com.zxp.pojo.User">
         insert into mybatis.user(id, name, pwd) VALUES (#{id},#{name},#{pwd});
     </insert>
