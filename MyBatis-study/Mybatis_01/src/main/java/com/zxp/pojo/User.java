@@ -5,7 +5,7 @@ public class User {
     private String name;
     private String pwd;
 
-    public User() {}
+    private User() {}
 
     public User(int id, String name, String pwd) {
         this.id = id;
