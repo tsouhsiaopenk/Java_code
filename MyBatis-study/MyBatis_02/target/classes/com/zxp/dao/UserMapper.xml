@@ -35,6 +35,7 @@
     <delete id="deleteUser" parameterType="int">
         delete from mybatis.user where id = #{id};
     </delete>
+<<<<<<< HEAD
 
     <!--    <select id="getUserListByLimit" parameterType="_int" resultMap="UserMap">-->
     <!--        select * from mybatis.user limit #{startIndex},#{pageSize};-->
@@ -43,4 +44,6 @@
         select * from mybatis.user limit #{startIndex},#{pageSize};
     </select>
 
+=======
+>>>>>>> 1b6212ad9d4f9a8fa1f747ffdd27d7b18d3d4b84
 </mapper>
