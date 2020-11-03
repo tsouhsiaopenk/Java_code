@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis_06" />
         <module name="Mybatis_01" />
+        <module name="Mybatis_07" />
         <module name="MyBatis_02" />
         <module name="mybatis_05" />
       </profile>

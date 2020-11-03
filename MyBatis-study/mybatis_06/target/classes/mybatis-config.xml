@@ -2,10 +2,10 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<!--configurationæ ¸å¿ƒé…ç½®æ–‡ä»¶-->
+<!--configurationºËÐÄÅäÖÃÎÄ¼þ-->
 <configuration>
 
-    <!--    è¿™ä¸ªåœ°æ–¹éœ€è¦å¼•å…¥å¤–éƒ¨é…ç½®æ–‡ä»¶      -->
+    <!--    Õâ¸öµØ·½ÐèÒªÒýÈëÍâ²¿ÅäÖÃÎÄ¼þ      -->
     <properties resource="db.properties"/>
 
     <typeAliases>
