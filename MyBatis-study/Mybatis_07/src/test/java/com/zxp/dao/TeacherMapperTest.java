@@ -7,6 +7,7 @@ import junit.framework.TestCase;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TeacherMapperTest extends TestCase {
