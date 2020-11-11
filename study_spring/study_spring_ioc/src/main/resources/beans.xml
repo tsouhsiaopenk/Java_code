@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDao" class="com.zxp.dao.UserDaoImpl"/>
+    <bean id="userDaoMysql" class="com.zxp.dao.UserDaoMysqlImpl"/>
+    <bean id="userDaoOracle" class="com.zxp.dao.UserDaoOracleImpl"/>
+
+    <bean id="userServiceImpl" class="com.zxp.service.UserServiceImpl">
+        <property name="userDao " ref="userDaoMysql"/>
+    </bean>
+
+</beans>

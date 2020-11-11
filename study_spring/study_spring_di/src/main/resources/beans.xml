@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="add" class="com.zxp.pojo.Address">
+        <property name="address" value="杭州"/>
+    </bean>
+
+    <bean id="student" class="com.zxp.pojo.Student">
+        <property name="name" value="周晓鹏"/>
+        <property name="address" ref="add"/>
+        <property name="books">
+            <array>
+                <value>三国演义</value>
+                <value>水浒传</value>
+                <value>红楼梦</value>
+                <value>西游记</value>
+            </array>
+        </property>
+        <property name="card">
+            <map key-type="java.lang.String" value-type="java.lang.String">
+                <entry key="身份证" value="625252875241"/>
+                <entry key="银行卡" value="156584612486"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>和平精英</value>
+                <value>王者荣耀</value>
+                <value>阴阳师</value>
+            </set>
+        </property>
+        <property name="wife">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="driver">171030338</prop>
+                <prop key="url">www.baidu.com</prop>
+                <prop key="username">root</prop>
+                <prop key="password">root</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
