@@ -11,6 +11,10 @@
     <modules>
         <module>study_spring_ioc</module>
         <module>study_spring_di</module>
+        <module>study_spring_autowired</module>
+        <module>study_spring_annotation</module>
+        <module>study_spring_proxy</module>
+        <module>study_spring_aop</module>
     </modules>
 
     <dependencies>
