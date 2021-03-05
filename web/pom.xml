@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>CRUD</module>
+        <module>Struts2</module>
+        <module>HibernateProgram</module>
     </modules>
 
     <dependencies>

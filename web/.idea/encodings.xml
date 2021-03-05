@@ -3,5 +3,12 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/CRUD/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CRUD/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HibernateProgram/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HibernateProgram/src/main/java/com/zxp/pojo/Product.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HibernateProgram/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Struts2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Struts2/src/main/java/com/javaweb/action/LoginAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Struts2/src/main/java/com/javaweb/action/RegisterAction-validation.xml" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

@@ -3,15 +3,19 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/CRUD" />
+    <file type="web" url="file://$PROJECT_DIR$/HibernateProgram" />
+    <file type="web" url="file://$PROJECT_DIR$/Struts2" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../untitled/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/JDBC/pom.xml" />
       </set>
     </option>

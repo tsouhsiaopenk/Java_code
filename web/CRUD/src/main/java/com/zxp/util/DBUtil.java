@@ -10,7 +10,7 @@ import java.sql.Statement;
 
 public class DBUtil {
     private static volatile DataSource DS;
-    private static final String URL = "jdbc:mysql://localhost:3306/stu";
+    private static final String URL = "jdbc:mysql://localhost:3306/stu?serverTimezone=UTC";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
     private DBUtil(){}

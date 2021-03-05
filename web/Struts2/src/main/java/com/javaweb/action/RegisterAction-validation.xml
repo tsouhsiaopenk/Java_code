@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<validators>
+	<field name="username">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>${getText("username.required")}</message>
+		</field-validator>
+
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(\w{6,20})]]></param>
+			<message>${getText("username.rule")}</message>
+		</field-validator>
+	</field>
+
+	<field name="password">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>${getText("password.required")}</message>
+		</field-validator>
+
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(\w{6,20})]]></param>
+			<message>${getText("password.rule")}</message>
+		</field-validator>
+	</field>
+
+	<field name="repassword">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>${getText("repassword.required")}</message>
+		</field-validator>
+
+		<field-validator type="regex" short-circuit="true">
+			<param name="expression"><![CDATA[(\w{6,20})]]></param>
+			<message>${getText("repassword.rule")}</message>
+		</field-validator>
+
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(repassword==password)]]></param>
+			<message>${getText("repassword.equals")}</message>
+		</field-validator>
+	</field>
+
+	<field name="age">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">120</param>
+			<message>${getText("age.rule")}</message>
+		</field-validator>
+	</field>
+
+	<field name="birth">
+		<field-validator type="date">
+			<param name="min">1900-01-01</param>
+			<param name="max">2010-01-01</param>
+			<message>${getText("birth.rule")}</message>
+		</field-validator>
+	</field>
+
+	<field name="email">
+		<field-validator type="email">
+			<message>${getText("email.rule")}</message>
+		</field-validator>
+	</field>
+</validators>

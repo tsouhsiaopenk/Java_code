@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <!-- 表明类Product对应数据库中的表product_ -->
+    <class name="com.zxp.pojo.Product" table="product" catalog="javaweb">
+        <!-- 属性id映射表里面的字段id -->
+        <id name="id">
+            <!-- generator表示id的自增长方式采用数据库的本地方式 -->
+            <generator class="assigned"/>
+        </id>
+        <!-- 配置属性映射字段 -->
+        <property name="name" />
+        <property name="price" />
+    </class>
+
+</hibernate-mapping>
